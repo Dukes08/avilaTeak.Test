@@ -92,10 +92,9 @@ class MovieScreenState extends ConsumerState<MovieScreen> {
                 child: SlideInUp(
                   delay: const Duration(milliseconds: 100),
                   child: SizedBox(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.44,
                     child: MovieDetailPopup(
-                      actors: actorsByMovie!,
+                      actors: actorsByMovie ?? [],
                       title: movie.title,
                       userScore: movie.voteAverage,
                     ),

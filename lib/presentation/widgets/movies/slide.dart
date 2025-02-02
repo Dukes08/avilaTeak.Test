@@ -13,7 +13,7 @@ class Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8),
+      margin: EdgeInsets.symmetric(horizontal: 6),
       child: GestureDetector(
         onTap: () => movie != null
             ? context.push('/movie/${movie!.id}')
@@ -70,21 +70,31 @@ class Slide extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      movie?.title ?? actor?.name ?? 'Unknown Title',
-                      style: TextStyle(
+                    SizedBox(
+                      width: movie != null ? 150 : 80,
+                      child: Text(
+                        movie?.title ?? actor?.name ?? 'Unknown Title',
+                        style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
-                          color: Colors.white),
+                          color: Colors.white,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ),
-                    Text(
-                      movie != null
-                          ? '${(movie!.voteAverage * 10).toInt()}% User score'
-                          : actor?.character ?? 'no data available',
-                      style: TextStyle(
+                    SizedBox(
+                      width: movie != null ? 150 : 80,
+                      child: Text(
+                        movie != null
+                            ? '${(movie!.voteAverage * 10).toInt()}% User score'
+                            : actor?.character ?? 'no data available',
+                        style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 16,
-                          color: Colors.white),
+                          color: Colors.white,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                     ),
                   ],
                 ),
