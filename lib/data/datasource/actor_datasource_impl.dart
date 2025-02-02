@@ -3,7 +3,6 @@ import 'package:avilatek_test/data/mappers/actor_mapper.dart';
 import 'package:avilatek_test/data/mappers/movie_mapper.dart';
 import 'package:avilatek_test/data/models/movieDb/creaditsdb_response.dart'
     as credits;
-import 'package:avilatek_test/data/models/movieDb/movie_from_moviedb.dart';
 import 'package:avilatek_test/data/models/movieDb/movies_by_actor.dart'
     as movies_by_actor_model;
 import 'package:avilatek_test/domain/datasource/actors_datasource.dart';

@@ -1,5 +1,5 @@
 import 'package:avilatek_test/domain/entities/actor.dart';
-import 'package:avilatek_test/presentation/widgets/movies/movie_slide.dart';
+import 'package:avilatek_test/presentation/widgets/movies/slide.dart';
 import 'package:flutter/material.dart';
 
 class MovieDetailPopup extends StatelessWidget {
@@ -38,18 +38,15 @@ class MovieDetailPopup extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 21),
-          // Mostrar los primeros tres actores
           if (actors.isNotEmpty)
             SizedBox(
-              height: 160, // Altura suficiente para mostrar los actores
+              height: 160,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: actors.take(3).map((actor) {
                   return Expanded(
-                    // Permite que cada MovieSlide ocupe espacio proporcional
                     child: SizedBox(
-                      // Define un tamaño fijo para evitar problemas de layout
-                      child: MovieSlide(actor: actor),
+                      child: Slide(actor: actor),
                     ),
                   );
                 }).toList(),

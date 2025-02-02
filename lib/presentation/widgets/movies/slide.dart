@@ -4,11 +4,11 @@ import 'package:avilatek_test/domain/entities/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class MovieSlide extends StatelessWidget {
+class Slide extends StatelessWidget {
   final Movie? movie;
   final Actor? actor;
 
-  const MovieSlide({super.key, this.movie, this.actor});
+  const Slide({super.key, this.movie, this.actor});
 
   @override
   Widget build(BuildContext context) {

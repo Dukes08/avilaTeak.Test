@@ -3,8 +3,6 @@ import 'package:avilatek_test/data/models/movieDb/movie_from_moviedb.dart';
 import 'package:avilatek_test/data/models/movieDb/movies_by_actor.dart';
 import 'package:avilatek_test/domain/entities/movie.dart';
 
-// recivimos la pelicula con el formato de la  api y la transformamos a la entidad que nuestra app maneja
-//esto ayuda a que si lo que retorna la api cambia solo tenemos que cambiarlo aca y no en toda la app, ya que la entity se mantiene igual solo que accede a valores distintos del objeto que viene de la api
 class MovieMapper {
   static Movie movieDbToEntity(MovieFromMovieDB moviedb) => Movie(
       adult: moviedb.adult,

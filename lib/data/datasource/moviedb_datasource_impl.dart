@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:avilatek_test/config/constants/enviroment.dart';
 import 'package:avilatek_test/data/mappers/movie_mapper.dart';
 import 'package:avilatek_test/data/models/movieDb/movieDb_response.dart';

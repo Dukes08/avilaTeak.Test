@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:avilatek_test/domain/entities/movie.dart';
-import 'package:avilatek_test/presentation/widgets/movies/movie_slide.dart';
+import 'package:avilatek_test/presentation/widgets/movies/slide.dart';
 import 'package:flutter/material.dart';
 
 class MoviesVerticalListview extends StatelessWidget {
@@ -17,7 +17,6 @@ class MoviesVerticalListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Add listener to the ScrollController
     scrollController.addListener(() {
       if (loadNextPage == null) return;
       if (scrollController.position.pixels + 200 >=
@@ -43,7 +42,7 @@ class MoviesVerticalListview extends StatelessWidget {
             child: Transform.translate(
               offset: isRightColumn ? Offset(0, 40) : Offset(0, 0),
               child: FadeInRight(
-                child: MovieSlide(movie: movies[index]),
+                child: Slide(movie: movies[index]),
               ),
             ),
           );
