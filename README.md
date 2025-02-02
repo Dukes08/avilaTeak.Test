@@ -9,12 +9,12 @@ The project follows the **Clean Architecture** pattern with three distinct layer
 
 ### 1. **Domain Layer**
 - Defines the business logic and rules.
-- Contains **abstract repositories** that specify how data should be accessed.
+- Contains abstract **repositories** and **datasources** that specify how data should be accessed.
 - Ensures **data integrity**, making it easier to switch data sources without affecting other layers.
 
 ### 2. **Data Layer**
 - Contains **data sources** responsible for fetching data from APIs.
-- Implements repositories defined in the **Domain Layer**.
+- Implements repositories and datasources defined in the **Domain Layer**.
 - Contains **models** that map API responses and **mappers** to transform them into app-friendly entities.
 
 ### 3. **Presentation Layer**
