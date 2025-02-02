@@ -46,6 +46,10 @@ The project follows the **Clean Architecture** pattern with three distinct layer
   - One for the **name and biography**.
   - Another for the **movies related to that actor**.
 
+## 🎭 Default Images for Missing Content
+- For movies or actors that do not have an image, a **default placeholder image** is provided.
+- This enhances the user experience by maintaining a visually consistent UI.
+
 ## 🚀 Running the Project
 To run the app, use the following command:
 ```sh
@@ -54,5 +58,7 @@ flutter run
 Or, if using **VS Code**, click the play button in the **upper right corner** of the main file. Ensure you have a simulator or physical device running.
 
 Enjoy exploring movies and actors! 🎥🍿
+
+
 
 
